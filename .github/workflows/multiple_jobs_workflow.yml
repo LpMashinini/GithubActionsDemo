@@ -1,0 +1,22 @@
+name: my_workflow
+on: workflow_dispatch
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+     - name: build phase
+       run: echo "build an App"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Phase
+        run: echo "Running test cases on the app"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy app
+        run: echo "Deployig the app"
+      
+        
