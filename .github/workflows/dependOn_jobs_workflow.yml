@@ -1,0 +1,23 @@
+name: depend Workflow
+on: workflow_dispatch
+jobs:
+  buiid:
+   runs-on: ubuntu-latest
+   steps:
+     - name: build Step
+       run: echo "Building Phase"
+       
+  test:
+   runs-on: ubuntu-latest
+   needs: buiid
+   steps:
+     - name: Test Phase
+       run: echo "Running Test cases"
+       
+  deploy:
+   runs-on: ubuntu-latest
+   needs: test
+   steps:
+     - name: Deploy Phase
+       run: echo "Deploying application"
+  
