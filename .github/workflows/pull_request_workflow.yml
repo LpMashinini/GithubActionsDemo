@@ -3,7 +3,6 @@ name: pull_workflow
     push:
       branches:
         - main
-        - 'release/**'
     pull_request:
         branches:
            - main
