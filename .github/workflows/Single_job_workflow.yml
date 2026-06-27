@@ -9,6 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: |
-          echo "This is line one!"
-          echo "This is line two"
+        run: echo "Hello, ${{vars.MY_NAME}}"
