@@ -1,5 +1,5 @@
 
-name: hello-world
+name: env workflow
 "on":
   push:
     branches:
