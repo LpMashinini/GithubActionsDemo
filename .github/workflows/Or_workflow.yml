@@ -1,0 +1,9 @@
+name: or Condition workflow
+"on": push
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Run for LpMashinini or GivenM
+          if: github.actor == 'LpMashinini' || github.actor == 'GivenM'
+          run: echo "It is triggered by either LpMashinini or GivenM"
