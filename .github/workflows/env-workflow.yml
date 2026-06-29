@@ -1,10 +1,6 @@
 
 name: hello-world
-"on":
-  push:
-    branches:
-      - main
-
+"on": workflow_dispatch
 env:
   App_ENV: "dev"
 jobs:
