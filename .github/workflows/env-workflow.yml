@@ -1,14 +1,16 @@
-name: env workflow
-"on":
-  workflow dispatch:
-  branches:
-    - main
-env:
-  App_env: "dev"
 
+name: hello-world
+"on":
+  push:
+    branches:
+      - main
+
+env:
+  App_ENV: "dev"
 jobs:
-  env_demo:
-  runs-on: ubuntu-latest
-  step:
-    - name: Connecting to Env
-      run: echo "App is connecting $APP_ENV"
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Connecting to Env
+        run: echo "App is connecting to $App_ENV"
+      
