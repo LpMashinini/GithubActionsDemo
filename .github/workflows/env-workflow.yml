@@ -6,9 +6,12 @@ name: env workflow
       - main
 
 env:
-  App_ENV: "dev"
+  App_ENV: "dev" #workfow level
+
 jobs:
-  my-job:
+  env-demo:
+    env:
+      App_ENV: "test" #job level 
     runs-on: ubuntu-latest
     steps:
       - name: Connecting to Env
