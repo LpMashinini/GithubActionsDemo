@@ -8,5 +8,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - names: Build Step
+      - name: Build Step
         run: echo "Building the application"
