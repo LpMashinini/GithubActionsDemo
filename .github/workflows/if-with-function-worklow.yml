@@ -14,7 +14,7 @@ jobs:
               run: echo "Performing"
 
     dev_deploy:
-        if: github.ref_name == 'main'  && github.event_name == 'push'
+        if: github.ref_name == 'develop'  && github.event_name == 'push'
         runs-on: ubuntu-latest
         steps:
             - name: Dev Deploy
